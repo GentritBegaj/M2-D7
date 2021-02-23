@@ -506,127 +506,132 @@
     </footer>
 
     <script>
-      /*
-        JS Exercises
-        EX11) Write a function to add a new link into the navbar*/
+            /*
+              JS Exercises
+              EX11) Write a function to add a new link into the navbar*/
 
-      function addNewLink() {
-        let navbar = document.querySelector("nav");
-        content = `<a class="p-2 text-muted" href="#">New Link</a>`;
-        navbar.innerHTML += content;
-      }
+            function addNewLink() {
+              let navbar = document.querySelector("nav");
+              content = `<a class="p-2 text-muted" href="#">New Link</a>`;
+              navbar.innerHTML += content;
+            }
 
-      /*
-        EX12) Write a function to change the color of the main title
-        */
-      function changeMainTitleColor() {
-        let titleOfPage = document.querySelector(".jumbotron > div > h1");
-        titleOfPage.style.color = "red";
-      }
+            /*
+              EX12) Write a function to change the color of the main title
+              */
+            function changeMainTitleColor() {
+              let titleOfPage = document.querySelector(".jumbotron > div > h1");
+              titleOfPage.style.color = "red";
+            }
 
-      /*
-        EX13) Write a function to change the background of the jumbotron
-        */
-      function changeJumbotronBackground() {
-        let jumbotron = document.querySelector(".jumbotron");
-        jumbotron.setAttribute("style", "background-color: blue !important");
-      }
+            /*
+              EX13) Write a function to change the background of the jumbotron
+              */
+            function changeJumbotronBackground() {
+              let jumbotron = document.querySelector(".jumbotron");
+              jumbotron.setAttribute("style", "background-color: blue !important");
+            }
 
-      /*
-        EX14) Write a function to remove all the links under "Elsewhere"
-        */
+            /*
+              EX14) Write a function to remove all the links under "Elsewhere"
+              */
 
-      function removeAllLinks() {
-        let elsewhere = document.querySelector("aside div:nth-child(3) ol");
-        elsewhere.innerHTML = "";
-      }
-      /*
-        EX15) Write a function to change the column size for post headings
-        */
+            function removeAllLinks() {
+              let elsewhere = document.querySelector("aside div:nth-child(3) ol");
+              elsewhere.innerHTML = "";
+            }
+            /*
+              EX15) Write a function to change the column size for post headings
+              */
 
-      function changeColumnSize() {
-        let headings = document.querySelectorAll(".blog-post > h2");
-        headings.forEach((h2) => (h2.innerHTML = "Changed Heading"));
-      }
+            function changeColumnSize() {
+              let headings = document.querySelectorAll(".blog-post > h2");
+              headings.forEach((h2) => (h2.innerHTML = "Changed Heading"));
+            }
 
-      /*
-        EX16) Write a function to remove the "Search" magnifying glass icon
-*/
-      function removeSearch(params) {
-        let searchIcon = document.querySelector(
-          "header .row div:last-child a:first-of-type"
-        );
-        searchIcon.remove();
-      }
+            /*
+              EX16) Write a function to remove the "Search" magnifying glass icon
+      */
+            function removeSearch(params) {
+              let searchIcon = document.querySelector(
+                "header .row div:last-child a:first-of-type"
+              );
+              searchIcon.remove();
+            }
 
-      /*
-        EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
-        */
+            /*
+              EX17) Write a function to trim just the first 50 characters in the first paragraph for each blog post
+              */
 
-      function trimFirst50() {
-        let allParagraphs = Array.from(
-          document.querySelectorAll(".blog-post p:first-child")
-        );
-        console.log(allParagraphs);
-        for (let i = 0; i < allParagraphs.length; i++) {
-          let text = allParagraphs[i].innerText;
-          text.slice(50);
-        }
-      }
+            function trimFirst50() {
+              let allParagraphs = Array.from(
+                document.querySelectorAll(".blog-post p:first-child")
+              );
+              console.log(allParagraphs);
+              for (let i = 0; i < allParagraphs.length; i++) {
+                let text = allParagraphs[i].innerText;
+                text.slice(50);
+              }
+            }
 
-      /*
-        EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
-        */
+            /*
+              EX18) Write a function and attach it to the "Newer" button, to add new Blog Post (just div and title)
+              */
 
-      function addNewBlog() {
-        let blogParent = document.querySelector("main .row .blog-main");
-        content = `<div class="blog-post">
-                <h2>Added blog post via JS</h2>
-                <p class="blog-post-meta">
-              December 14, 2013 by <a href="#">Chris</a>
-            </p>
+            function addNewBlog() {
+              let blogParent = document.querySelector("main .row .blog-main");
+              content = `<div class="blog-post">
+                      <h2>Added blog post via JS</h2>
+                      <p class="blog-post-meta">
+                    December 14, 2013 by <a href="#">Chris</a>
+                  </p>
 
-            <p>
-              Cum sociis natoque penatibus et magnis dis parturient montes,
-              nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
-              consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
-              dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
-              ut fermentum massa justo sit amet risus.
-            </p>
-            <ul>
-              <li>
-                Praesent commodo cursus magna, vel scelerisque nisl consectetur
-                et.
-              </li>
-              <li>Donec id elit non mi porta gravida at eget metus.</li>
-              <li>Nulla vitae elit libero, a pharetra augue.</li>
-            </ul>
-            </div>`;
-        blogParent.innerHTML += content;
-      }
+                  <p>
+                    Cum sociis natoque penatibus et magnis dis parturient montes,
+                    nascetur ridiculus mus. Aenean lacinia bibendum nulla sed
+                    consectetur. Etiam porta sem malesuada magna mollis euismod. Fusce
+                    dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh,
+                    ut fermentum massa justo sit amet risus.
+                  </p>
+                  <ul>
+                    <li>
+                      Praesent commodo cursus magna, vel scelerisque nisl consectetur
+                      et.
+                    </li>
+                    <li>Donec id elit non mi porta gravida at eget metus.</li>
+                    <li>Nulla vitae elit libero, a pharetra augue.</li>
+                  </ul>
+                  </div>`;
+              blogParent.innerHTML += content;
+            }
 
-      let newerButton = document.querySelector("main nav a:last-of-type");
-      newerButton.classList.remove("disabled");
-      newerButton.removeAttribute("href");
-      newerButton.setAttribute("onclick", "addNewBlog()");
+            let newerButton = document.querySelector("main nav a:last-of-type");
+            newerButton.classList.remove("disabled");
+            newerButton.removeAttribute("href");
+            newerButton.setAttribute("onclick", "addNewBlog()");
 
-      /*
-        EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
-        */
+            /*
+              EX19) Write a function and attach it to the "Older" button, to remove the last Blog Post
+              */
 
-      function removeLastBlog() {
-        let lastBlog = document.querySelector(
-          "main .row .blog-main .blog-post:last-of-type"
-        );
-        lastBlog.remove();
-      }
-      let olderButton = document.querySelector("main nav a:first-of-type");
-      olderButton.removeAttribute("href");
-      olderButton.setAttribute("onclick", "removeLastBlog()");
+            function removeLastBlog() {
+              let lastBlog = document.querySelector(
+                "main .row .blog-main .blog-post:last-of-type"
+              );
+              lastBlog.remove();
+            }
+            let olderButton = document.querySelector("main nav a:first-of-type");
+            olderButton.removeAttribute("href");
+            olderButton.setAttribute("onclick", "removeLastBlog()");
 
-      /*
-        EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
-    */
+            /*
+              EX20) Write an alert with the name of the author every time the user hover with the mouse over an author name
+          */
+            function authorName() {
+              let hoverName = document.querySelector('body > main > div > div > div > p.blog-post-meta > a')
+              hoverName.onmouseover = function() {
+                this.style.
+              }
     </script>
   </body>
 </html>
